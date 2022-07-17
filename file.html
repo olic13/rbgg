@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<link rel="stylesheet"  href="style.css">
+	<title>Hossam Benaceur</title>
+	<style >
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+		*{
+			padding: 0;
+			margin: 0;
+			font-family: 'Poppins', sans-serif;
+			box-sizing: border-box;
+			scroll-behavior: smooth;
+		}
+		header{
+			background-color: #f0f0f0;
+			width: 100%;
+			position: fixed;
+			z-index: 99;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 10px 200px;
+		}
+		.logo{
+			text-decoration: none;
+			color: #3498DB;
+			text-transform: uppercase;
+			font-weight: 700;
+			font-size: 1.8em
+		}
+		.navigation a{
+			text-decoration: none;
+			color: #3498DB;
+			font-weight: 500;
+			font-size: 1.0em;
+			padding-left: 30px;
+		}
+		.navigation a:hover{
+			color: #566573 ;
+		}
+		section{
+			padding: 100px 200px;
+			
+		}
+		.main{
+			width: 100%;
+			min-height: 100vh;
+			display: flex;
+			align-items: center;
+			background: url(03.jpg) no-repeat;
+			background-size: cover;
+			background-position: center;
+			background-attachment: fixed;
+		}
+		.main h2{
+			color: white;
+			font-size: 1.4em;
+			font-weight: 500;
+			letter-spacing: 0.5px;
+
+		}
+		.main h2 span{
+			color: #3498DB;
+			font-size: 3em;
+			display: inline-block;
+			margin-top: 10px;
+			font-weight: 800;
+		}
+		.main h3{
+			color: white;
+			font-size: 2em;
+			font-weight: 700;
+			margin-top: 10px;
+			margin-bottom: 30px;
+			letter-spacing: 1px;
+		}
+		.main-btn{
+			color: #fff;
+			background-color:#3498DB ;
+			text-decoration: none;
+			font-size: 1.1em;
+			font-weight: 600;
+			display: inline-block;
+			padding: 0.9375em 2.1875em;
+			letter-spacing: 1px;
+			border-radius: 15px;
+			margin-bottom:40px;
+			transition: 0.7s ease;
+		}
+		.main-btn:hover{
+			background-color:#0060A1;
+			transform: scale(1.1);
+		}
+		.social-icons a{
+			color: white;
+			font-size: 1.7em;
+			padding-right: 30px;
+		}
+		.title{
+			display: flex;
+			justify-content: center;
+			color:#3498DB ;
+			font-weight: 800;
+			font-size: 2.2em;
+			margin-bottom: 30px;
+		}
+		.content{
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+		.card{
+			background-color: #fff;
+			width: 21.25em;
+			box-shadow: 0 5px 25px rgba(1, 1, 1, 25%);
+			border-radius: 15px;
+			padding: 25px;
+			margin: 15px;
+			transition: 0.7s ease
+
+		}
+		.card:hover{
+			transform: scale(1.1);
+		}
+		.icon{
+			color: #3498DB;
+			font-size: 8em;
+			text-align:center ;
+		}
+		.info{
+			text-align: center;
+		}
+		.info h2{
+			color: #3498DB;
+			font-size: 1.2em;
+			font-weight: 700;
+			margin: 10px;
+		}
+		.projects{
+			background-color: #000;
+		}
+		.projects .content{
+			margin: 30px;
+
+		}
+		.pcard{
+			background-color: #fff;
+			border: 1px solid #fff;
+			min-height: 14em;
+			width: 23em;
+			overflow: hidden;
+			border-radius: 12.5px;
+			margin: 20px;
+			transition: 0.7s ease;
+		}
+		.pcard:hover{
+			transform: scale(1.1);
+		}
+		.pimage img{
+			width: 100%;
+		}
+		.pimage img:hover{
+			opacity: 95%;
+		}
+		.pinfo{
+			padding: 1px;
+		}
+		.pcategory{
+			font-size: 0.8em;
+			color: #000;
+			padding-left: 10px;
+		}
+		.ptitle{
+			display: flex;
+			justify-content:space-around;
+			text-transform: uppercase;
+			font-weight: 800;
+			margin-top: 5px;
+		}
+		.ptitle .more-details{
+			text-decoration: none;
+			color: #3498DB;
+		}
+		.ptitle .more-details:hover{
+			color: #0060A0 ;
+		}
+		.ccards .icon{
+			font-size: 6em;
+		}
+		.ccards .info h2{
+			font-size: 1.4em;
+			color: black;
+			font-weight: 700;
+		}
+		.ccards .info p{
+			font-weight: 500;
+			font-size: 1.1em;
+
+		}
+		footer{
+			background-color: black;
+			color: white;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 2em;
+		}
+		footer h2{
+			font-size: 1.1em;
+		}
+		footer h2 span{
+			color: #3498DB;
+		}
+		footer h2 span:hover{
+			color:#0060A0 ;
+		}
+		footer .social-icons a{
+			font-size: 1.2em;
+			padding: 0;
+			padding-right: 10px;
+		}
+		@media (max-width: 1023px)  
+		{
+			header{
+				padding: 12px 26px;
+			}
+			.navigation a {
+				padding-left: 7px;  
+			}
+			.main {
+				justify-content: center;
+				background-position: 66%;
+			}
+			.card{
+				padding: 53px;
+    			margin: 18px;
+    			width: 300px;
+			}
+			.content {
+			    display: flex;
+			    flex-direction: column;
+			    flex-wrap: wrap;
+			    align-content: center;
+			}
+			.pcard{
+				width: 22em
+			}
+			.icon{
+				font-size: 7em;
+			}
+			footer{
+				padding: 21px;
+			}
+			footer .social-icons a {
+			    font-size: 1em;
+			    padding: 0;
+			    padding-right: 10px;
+			}
+			footer h2 {
+			    font-size: 0.7em;
+			}
+			section {
+			    padding: 37px 120px;
+			}
+			.logo{
+				font-size: 1.6em;
+			}
+		@media (max-width: 410px)  
+		{
+			.logo{
+				font-size: 1.5em;
+			}
+			.navigation a {
+			    padding-left: 7px;
+			    font-size: 0.8em;
+			}
+			
+		}
+		@media (max-width: 350px) 
+		{
+			.navigation a{
+			    padding-left: 1px;
+			    font-size: 0.7em;
+			}
+			footer h2{
+			    font-size: 0.5em;
+			}
+			footer .social-icons a{
+			    font-size: 0.8em;
+			    padding-right: 7px;
+			}
+		}	
+
+	</style>
+		
+</head>
+<body>
+	<header>
+		<a href="#" class="logo">Hossam</a>
+		<nav class="navigation">
+			<a href="#Services">Services</a>
+			<a href="#projects">Projects</a>
+			<a href="#contant">Contact</a>
+		</nav>
+	</header>
+	<section class="main">
+		<div>
+			<h2>Hello,I'm Hossam<br><span>Junior developer</span></h2>
+			<h3>This is an example</h3>
+			<a href="#min-btn" class="main-btn">View my work</a>
+			<div class="social-icons">
+				<a href="https://www.facebook.com/olic13/" target="_balnk"><i class="fab fa-facebook"></i></a>
+				<a href="https://www.instagram.com/olic13/" target="_balnk"><i class="fab fa-instagram"></i></a>
+				<a href="https://twitter.com/Hossam_Benaceur" target="_balnk"><i class="fab fa-twitter"></i></a>
+				<a href="https://www.linkedin.com/in/hossam-benaceur-8a72b221a/" target="_balnk"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+
+		</div>
+	</section>
+	<section class="cards" id="Services">
+		<h2 class="title">Services</h2>
+		<div class="content">
+			<div class="card">
+			<div class="icon"><i class="fas fa-taxi"></i></div>	
+			<div class="info">
+				<h2>Test</h2>
+				<p>Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Natus labore dolore ab illum illo, nobis cum nulla, maxime modi voluptatem.</p>
+			</div>
+			</div>
+			<div class="card">
+			<div class="icon"><i class="fas fa-hand-holding-water"></i></i></div>	
+			<div class="info">
+				<h2>Test</h2>
+				<p>Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Natus labore dolore ab illum illo, nobis cum nulla, maxime modi voluptatem.</p>
+			</div>
+			</div>
+			<div class="card">
+			<div class="icon"><i class="fas fa-book-open"></i></i></div>	
+			<div class="info">
+				<h2>Test</h2>
+				<p>Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Natus labore dolore ab illum illo, nobis cum nulla, maxime modi voluptatem.</p>
+			</div>
+			</div>
+		</div>
+	</section>
+	<section class="projects" id="projects">
+		<h2 class="title">Projects</h2>
+		<div class="content">
+			<div class="pcard">
+				<div class="pimage">
+					<img src="04.jpg" alt="photo" >
+				</div>
+				<div class="pinfo">
+					<p class="pcategory">Lorem, ipsum dolor sit amet.</p>
+					<strong class="ptitle">
+						<span>Dev Books</span>
+						<a href="#Services" class="more-details">More details</a>
+					</strong>
+				</div>
+			</div>
+			<div class="pcard">
+				<div class="pimage">
+					<img src="04.jpg" alt="photo" >
+				</div>
+				<div class="pinfo">
+					<p class="pcategory">Lorem, ipsum dolor sit amet.</p>
+					<strong class="ptitle">
+						<span>Dev Books</span>
+						<a href="#Services" class="more-details">More details</a>
+					</strong>
+				</div>
+			</div>
+			<div class="pcard">
+				<div class="pimage">
+					<img src="04.jpg" alt="photo" >
+				</div>
+				<div class="pinfo">
+					<p class="pcategory">Lorem, ipsum dolor sit amet.</p>
+					<strong class="ptitle">
+						<span>Dev Books</span>
+						<a href="#Services" class="more-details">More details</a>
+					</strong>
+				</div>
+			</div>
+			<div class="pcard">
+				<div class="pimage">
+					<img src="04.jpg" alt="photo" >
+				</div>
+				<div class="pinfo">
+					<p class="pcategory">Lorem, ipsum dolor sit amet.</p>
+					<strong class="ptitle">
+						<span>Dev Books</span>
+						<a href="#Services" class="more-details">More details</a>
+					</strong>
+				</div>
+			</div>
+			<div class="pcard">
+				<div class="pimage">
+					<img src="04.jpg" alt="photo" >
+				</div>
+				<div class="pinfo">
+					<p class="pcategory">Lorem, ipsum dolor sit amet.</p>
+					<strong class="ptitle">
+						<span>Dev Books</span>
+						<a href="#Services" class="more-details">More details</a>
+					</strong>
+				</div>
+			</div>
+			<div class="pcard">
+				<div class="pimage">
+					<img src="04.jpg" alt="photo" >
+				</div>
+				<div class="pinfo">
+					<p class="pcategory">Lorem, ipsum dolor sit amet.</p>
+					<strong class="ptitle">
+						<span>Dev Books</span>
+						<a href="#Services" class="more-details">More details</a>
+					</strong>
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<section class="ccards" id="contant">
+		<h2 class="title">Let's work together</h2>
+		<div class="content">
+			<div class="card">
+			<div class="icon"><i class="fas fa-phone"></i></div>	
+			<div class="info">
+				<h2>Phone</h2>
+				<p>+213664473635</p>
+			</div>
+			</div>
+			<div class="card">
+			<div class="icon"><i class="fas fa-envelope"></i></i></div>	
+			<div class="info">
+				<h2>Email</h2>
+				<p>Hossambusi@gmail.com</p>
+			</div>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<h2>Copyrights @ <span>Hossam Benaceur</span></h2>
+		<div class="social-icons">
+				<a href="https://www.facebook.com/olic13/" target="_balnk"><i class="fab fa-facebook"></i></a>
+				<a href="https://www.instagram.com/olic13/" target="_balnk"><i class="fab fa-instagram"></i></a>
+				<a href="https://twitter.com/Hossam_Benaceur" target="_balnk"><i class="fab fa-twitter"></i></a>
+				<a href="https://www.linkedin.com/in/hossam-benaceur-8a72b221a/" target="_balnk"><i class="fab fa-linkedin-in"></i></a>
+		</div>
+	</footer>
+	 
+	
+</body>
+</html>
